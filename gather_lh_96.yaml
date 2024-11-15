@@ -1,0 +1,39 @@
+# 测试文件路径，支持视频文件夹嵌套，如果文件夹下有configInfo.json就认为是一个测试文件夹
+TESTPATHS: "/data/yjy/testData/videos/抛洒物/标框"
+
+# 测试文件路径，这个路径下的测试视频的报警事件会通过大模型二次确认 
+TESTPATHS_LLM: []
+
+# 日志详细程度
+LOGGING_LEVEL: DEBUG
+
+#视频文件的合法后缀
+SUFFIXS: ['.avi','.mkv','.mov','.mp4']
+
+# CloudEagleServer的文件夹
+# EXE_DIR: "/data/autoTestEvent-1209-lh"
+EXE_DIR: "/data/autoTestEvent-1209-zy"
+
+# 可执行程序名
+# EXE_NAME: "CloudEagleTest_lh"
+EXE_NAME: "CloudEagleTest"
+
+# 此时间戳下的文件夹不再跑
+EXCEPT_TIME_STAMPS: [] 
+
+# 过WAIT_TIME后开始判断判断程序是否结束
+WAIT_TIME: 5
+
+# 保存结果的路径
+RESULT_DIR: "/data/zhy/result"
+# "/data/liuhui_test/result"
+
+#并行跑视频数量
+CONCURRENT_NUM: 10
+
+# 0：不转视频编码，1：将h265的视频转为h264, 没开启！
+CONVERT_CODEC: 0
+
+
+
+

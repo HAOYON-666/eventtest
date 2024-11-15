@@ -1,0 +1,68 @@
+# 测试文件路径，支持视频文件夹嵌套，如果文件夹下有configInfo.json就认为是一个测试文件夹
+TESTPATHS: [
+    #"/home/nfs_share/objectpic/样本集/交通2/南京殷巷测试集/误报/现场视频4-19/车道倒车_错",
+    #"/home/nfs_share/objectpic/样本集/交通2/南京殷巷测试集/正样本/现场视频4-19/车道倒车_对/",
+    "/home/nfs_share/objectpic/样本集/轻微违法事件检测项目/正样本/非机动车载人-1/场景1"
+    ]
+
+# 测试文件路径，这个路径下的测试视频的报警事件会通过大模型二次确认 
+TESTPATHS_LLM: [
+    "/data/120_share/objectpic/样本集/交通/正样本（五大事件）/抛洒物/隧道"
+]
+# 日志详细程度
+LOGGING_LEVEL: DEBUG
+
+#视频文件的合法后缀
+SUFFIXS: ['.avi','.mkv', '.mov', '.mp4']
+
+# CloudEagleServer的文件夹
+EXE_DIR: "/home/ZPY/CloudEagleServer"
+
+# 可执行程序名
+EXE_NAME: "CloudEagleServer"
+
+# 此时间戳下的文件夹不再跑
+EXCEPT_TIME_STAMPS: [] 
+
+# 过WAIT_TIME后开始判断判断程序是否结束
+WAIT_TIME: 5
+
+# config.ini中配置的配置文件路径
+EXE_CONFIG_INFO_PATH: "/home/ZPY/CloudEagleServer/configInfo.json"
+
+# 保存结果的路径
+RESULT_DIR: "/home/ZPY/CloudEagleServer/result/lhp_result0102212"
+
+# 0：不转视频编码，1：将h265的视频转为h264, 没开启！
+CONVERT_CODEC: 0
+
+# 用来判断程序结束的端口号
+PORT: "42345"
+
+# 用来统计事件报警的端口号
+EVENT_PORT: "42656"
+
+# ================== configInfo.json 中的字段参数，改动所有测试的configInfo.json文件 ===============================
+
+# 并行跑视频数量,如果设置0，则从configInfo.json中读取此参数，
+CONCURRENT_NUM: 10
+
+# gpuid
+GPU_ID: 0
+
+# 重连时间
+ReconnectTime: 5
+
+# 是否循环跑， 2表示不循环跑
+LoopVideo: 2
+
+# 场景设定, int类型，(如果不想用可以注释掉，注释之后会用测试目录下的默认配置['CameraInfo'][0]，没有加这个标识的不支持注释！！！！！！！)
+#SenceType: 4
+
+# (如果不想用可以注释掉，注释之后会用测试目录下的默认配置['CameraInfo'][0]，没有加这个标识的不支持注释！！！！！！！)
+#ThreshValue: "3"
+# ================== configInfo.json 中的字段参数，改动所有测试的configInfo.json文件 ===============================
+
+
+
+
